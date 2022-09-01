@@ -1,20 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const {estadosController} = require('../controllers');
 
-router.get('/', (req, res)=>{
-    res.json({msg:'todos los estados'});
-});
+router.get('/', estadosController.getEstados);
 
-router.post('/', (req, res)=>{
-    res.json({msg:'estado insertado'});
-});
+router.post('/', estadosController.createEstados);
 
-router.put('/', (req, res)=>{
-    res.json({msg:'estado actualizado'});
-});
+router.put('/', estadosController.updateEstados);
 
-router.delete('/', (req, res)=>{
-    res.json({msg:'estado eliminado'});
-});
+router.delete('/', estadosController.deleteEstados);
 
 module.exports = router;

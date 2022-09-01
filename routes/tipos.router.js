@@ -1,20 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const {tiposController} = require('../controllers');
 
-router.get('/', (req, res)=>{
-    res.json({msg:'todos los tipos'});
-});
+router.get('/', tiposController.getTipos);
 
-router.post('/', (req, res)=>{
-    res.json({msg:'tipo insertado'});
-});
+router.post('/', tiposController.createTipos);
 
-router.put('/', (req, res)=>{
-    res.json({msg:'tipo actualizado'});
-});
+router.put('/', tiposController.updateTipos);
 
-router.delete('/', (req, res)=>{
-    res.json({msg:'tipo eliminado'});
-});
+router.delete('/', tiposController.deleteTipos);
 
 module.exports = router;

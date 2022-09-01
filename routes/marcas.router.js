@@ -1,20 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const {marcasController} = require('../controllers');
 
-router.get('/', (req, res)=>{
-    res.json({msg:'todos las marcas'});
-});
+router.get('/', marcasController.getMarcas);
 
-router.post('/', (req, res)=>{
-    res.json({msg:'marca insertada'});
-});
+router.post('/', marcasController.createMarcas);
 
-router.put('/', (req, res)=>{
-    res.json({msg:'marca actualizada'});
-});
+router.put('/', marcasController.updateMarcas);
 
-router.delete('/', (req, res)=>{
-    res.json({msg:'marca eliminada'});
-});
+router.delete('/', marcasController.deleteMarcas);
 
 module.exports = router;

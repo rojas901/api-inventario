@@ -1,20 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const {inventarioController} = require('../controllers');
 
-router.get('/', (req, res)=>{
-    res.json({msg:'todos los registros'});
-});
+router.get('/', inventarioController.getInventario);
 
-router.post('/', (req, res)=>{
-    res.json({msg:'registro insertado'});
-});
+router.post('/', inventarioController.createInventario);
 
-router.put('/', (req, res)=>{
-    res.json({msg:'registro actualizado'});
-});
+router.put('/', inventarioController.updateInventario);
 
-router.delete('/', (req, res)=>{
-    res.json({msg:'registro eliminado'});
-});
+router.delete('/', inventarioController.deleteInventario);
 
 module.exports = router;

@@ -1,20 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const {usuariosController} = require('../controllers');
 
-router.get('/', (req, res)=>{
-    res.json({msg:'todos los usuarios'});
-});
+router.get('/', usuariosController.getUsuarios);
 
-router.post('/', (req, res)=>{
-    res.json({msg:'usuario insertado'});
-});
+router.post('/', usuariosController.createUsuarios);
 
-router.put('/', (req, res)=>{
-    res.json({msg:'usuario actualizado'});
-});
+router.put('/', usuariosController.updateUsuarios);
 
-router.delete('/', (req, res)=>{
-    res.json({msg:'usuario eliminado'});
-});
+router.delete('/', usuariosController.deleteUsuarios);
 
 module.exports = router;
