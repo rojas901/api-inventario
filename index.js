@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const routes = require('./routes');
 const morgan = require('morgan');
+const conectarBD = require('./config/db')
+
 const port = 3000;
 
 app.use(morgan('dev'));
@@ -18,4 +20,5 @@ app.use('/inventario', routes.inventarioRoutes);
 
 app.listen(port, ()=>{
     console.log(`Escuchando en el puerto http://localhost:${port}`);
+    conectarBD();
 });
