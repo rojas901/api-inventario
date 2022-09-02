@@ -1,3 +1,5 @@
+const usuariosModel = require('../models/usuarios');
+
 const getUsuarios = (req, res) => {}
 
 const createUsuarios = (req, res) => {}

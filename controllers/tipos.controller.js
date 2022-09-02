@@ -1,3 +1,5 @@
+const tiposModel = require('../models/tipos');
+
 const getTipos = (req, res) => {
     
 }

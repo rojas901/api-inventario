@@ -1,3 +1,5 @@
+const marcasModel = require('../models/marcas');
+
 const getInventario = (req, res) => {}
 
 const createInventario = (req, res) => {}

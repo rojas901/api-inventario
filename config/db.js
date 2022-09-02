@@ -9,5 +9,3 @@ const conectarBD = async () => {
 }
 
 module.exports = conectarBD;
-
-

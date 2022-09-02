@@ -1,3 +1,5 @@
+const estadosModel = require('../models/estados');
+
 const getEstados = (req, res) => {}
 
 const createEstados = (req, res) => {}

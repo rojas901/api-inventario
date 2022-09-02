@@ -1,3 +1,5 @@
+const marcasModel = require('../models/marcas');
+
 const getMarcas = (req, res) => {}
 
 const createMarcas = (req, res) => {}
