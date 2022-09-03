@@ -1,7 +1,7 @@
 const tiposModel = require('../models/tipos');
 
 const getTipos = (req, res) => {
-    
+    res.status(200).json({message: 'Todos los tipos'});
 }
 
 const createTipos = (req, res) => { 
